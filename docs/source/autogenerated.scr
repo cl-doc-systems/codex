@@ -22,4 +22,14 @@ render the documentation for functions, methods and classes:
 
 @end(section)
 
+@begin(deflist)
+
+@term(NOTE)
+@def(
+  There is @link[uri=https://github.com/CommonDoc/codex/issues/30](an issue) in @c(Codex) and it does not render
+  function descriptions propertly when running inside the GitHub Action.
+)
+
+@end(deflist)
+
 @end(section)
