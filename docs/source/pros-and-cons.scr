@@ -6,6 +6,7 @@
 
 @begin(list)
 @item(Beautifully rendered documentation.)
+@item(Supports different themes.)
 @item(Flexible document stucture representation which uses @link[uri="http://commondoc.github.io/docs/overview.html"](CommonDoc).)
 @item(You can write your own markup engines in for @c(CommonDoc) and they should work with @c(Codex).)
 @item(
@@ -18,6 +19,7 @@
   
   And it is @link[uri="https://40ants.com/lisp-project-of-the-day/2020/09/0178-scriba.html"](relatively easy) to write new extensions.
 )
+@item(There is @link[uri=http://commondoc.github.io/codex/docs/tutorial.html#linking-to-the-clhs](a special tag) to reference a symbols from CL specification.)
 
 @end(list)
 
