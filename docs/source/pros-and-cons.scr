@@ -1,0 +1,42 @@
+@begin(section)
+@title(Pros & Cons of Codex)
+
+@begin(section)
+@title(Pros)
+
+@begin(list)
+@item(Beautifully rendered documentation.)
+@item(Flexible document stucture representation which uses @link[uri="http://commondoc.github.io/docs/overview.html"](CommonDoc).)
+@item(You can write your own markup engines in for @c(CommonDoc) and they should work with @c(Codex).)
+@item(
+  You can choose in which markup docstrings are.
+
+  Right now @c(CommonDoc) supports only two @link[uri="http://commondoc.github.io/docs/formats.html"](formats): @c(Scriba) and @c(VerTeX)
+)
+@item(
+  @c(CommonDoc) and @c(Scriba) has @link[uri="http://commondoc.github.io/docs/extensions.html"](extensions) to render plots and TeX formulas.
+  
+  And it is @link[uri="https://40ants.com/lisp-project-of-the-day/2020/09/0178-scriba.html"](relatively easy) to write new extensions.
+)
+
+@end(list)
+
+
+@end(section)
+
+@begin(section)
+@title(Cons)
+
+@begin(list)
+
+@item(Default markup language is @link[uri="https://github.com/CommonDoc/scriba"](Scriba). And you have to learn it.)
+@item(Scriba is powerful, but hard to read because of heavy usage of markup keywords.)
+@item(Errors in markup is hard to debug because you have to inspect backtraces.)
+@item(There is no cross-referencing feature.)
+@item(I didn't find how to make Codex to generate @c(index.html) file)
+
+@end(list)
+
+@end(section)
+
+@end(section)

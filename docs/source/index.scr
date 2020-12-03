@@ -1,0 +1,25 @@
+@begin[ref=index](section)
+@title(Introduction)
+
+This is a small library includes a few functions with docstrings and a documentation
+for the system and all included packages.
+
+The purpose is to demonstrate core features of the
+@link[uri="http://commondoc.github.io/codex/"](Codex) library.
+
+The repository can be used as a template for new libraries if you've choosen @c(Codex)
+for documenting your library.
+
+Let's review features, provided by @c(Codex).
+
+@begin(deflist)
+
+@term(NOTE)
+@def(
+  I have to set a special reference for this section, to make @c(Codex) to generate
+  filename @c(index.html) for this section.
+)
+
+@end(deflist)
+
+@end(section)

@@ -1,0 +1,23 @@
+@begin(section)
+@title(Handwritten documentation)
+
+I think the ability to write a large pieces of documentation which aren't bound to
+a function, class or module is an important feature. This way you can tell the user
+about some toplevel abstractions and give a bird eye view on the library or system.
+
+For example, handwritten parts of the documentation can provide some code snippets
+to demonstrate the ways, how to use the library:
+
+@begin[lang=lisp](code)
+(loop repeat 42
+      collect (foo "bar" 100500))
+@end(code)
+
+And when you are talking about some function or class, you might want to reference it.
+For example, if I'm talking about @c(foo) function, I want a reference to become a link.
+
+However @c(Codex) does not support cross referencing.
+There is a @c(@ref) tag, but @link[uri="http://commondoc.github.io/scriba/docs/reference.html#links"](seems) you have to
+make anchors manually.
+
+@end(section)

@@ -13,16 +13,18 @@
 (defun do-the-job (first second)
   "The function does the job.
 
-It **concatenates** first and second arguments
-calling internal function concat.
+   It @b(concatenates) first and second arguments
+   calling internal function concat.
 
-On this multiline we'll check how does documentation
-system processes docstrings.
+   On this multiline we'll check how does documentation
+   system processes docstrings.
 
-By the way, pay attention at the second paragraph where
-I've used `reStructured text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/>`_
-format to make the word \"concatenates\" bold.
+   By the way, pay attention at the second paragraph where
+   I've used @link[uri=http://commondoc.github.io/scriba/docs/reference.html](Scriba's format)
+   to make the word \"concatenates\" bold.
 
-Also, we can reference some parts of the documentation.
-Read more about cross referencing in the :ref:`Handwritten documentation` chapter."
+   Also, we can reference some parts of the documentation. Is not a cross-reference though.
+   Read more about writing docs in the @ref[doc=handwritten id=beginning](Handwritten documentation) chapter.
+
+   But seems the resulting link is broken because it points to @c(.../handwritten.html/#beginning)."
   (concat first second))

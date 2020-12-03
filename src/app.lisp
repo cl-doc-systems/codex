@@ -14,9 +14,9 @@
 (defun foo (first &key (other 100500))
   "This is example function.
 
-   Internally it calls :function:`example/utils:do-the-job`
+   Internally it calls EXAMPLE/UTILS:DO-THE-JOB
    to do the real job.
 
-   Note, that the link above is broken, but Coo does not warn us when building the docs.
-   Sphinx issues a warning inn such case."
+   Note, that the there is no link above because Codex does not
+   support cross referencing yet."
   (example/utils:do-the-job first other))

@@ -1,0 +1,8 @@
+@begin(section)
+@title(Conclusion)
+
+Documentation looks pretty and I like the idea of extensible @c(CommonDoc) format,
+but the lack of cross referencing, markup complexity and bugs make @c(Codex) less
+appealing than @link[uri=https://github.com/cl-doc-systems/mgl-pax](MGL-PAX).
+
+@end(section)

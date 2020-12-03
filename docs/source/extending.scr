@@ -1,0 +1,61 @@
+@begin(section)
+@title(Extending Codex)
+
+@c(Codex), @c(CommonDoc) and @c(Scriba) were built with extensibility in mind. Here is an example
+I've published in the #poftheday @link[uri="https://40ants.com/lisp-project-of-the-day/2020/09/0178-scriba.html"](post).
+
+It adds a new type of node into the markup language:
+
+@begin[lang=lisp](code)
+
+POFTHEDAY> (common-doc:define-node twitter (common-doc:markup)
+                                   ()
+                                   (:tag-name "twitter"))
+
+POFTHEDAY> (common-html.emitter::define-emitter (node twitter)
+             (let* ((username (common-doc:text (first (common-doc:children node))))
+                    (url (format nil "https://twitter/~A" username))
+                    (name (format nil "@~A" username)))
+               (common-html.emitter::with-tag ("a" node :attributes `(("href" . ,url)))
+                                              (write-string name
+                                                            common-html.emitter::*output-stream*))))
+
+POFTHEDAY> (common-doc.format:parse-document *format* "Hello @ twitter(bob)!")
+#<COMMON-DOC:DOCUMENT "">
+
+POFTHEDAY> (pandocl:emit  * "hello.html")
+#<COMMON-DOC:DOCUMENT "">
+
+POFTHEDAY> (alexandria:read-file-into-string "hello.html")
+"<!DOCTYPE html>
+ <html>
+    <head><title></title></head>
+    <body>
+       Hello <a href=\"https://twitter/bob\">@bob</a>!
+    </body>
+</html>"
+
+@end(code)
+
+@begin(deflist)
+
+@term(NOTE@sup(1))
+
+@def(
+  I've intentionally added a space between 
+  character and @c(twitter) node name in the snippet
+  abover, because @link[uri="https://github.com/CommonDoc/scriba/issues/6"](there is a bug) in the Scriba
+  parser which does not allow to use unknown Scriba tags in the code snippets.
+)
+
+@term(NOTE@sup(2))
+
+@def(
+  I've intended to add a sad "smile" at the end of the previos note, but seems
+  @link[uri="https://github.com/CommonDoc/scriba/issues/7"](Scriba doesnt' understand jokes).
+)
+
+@end(deflist)
+
+@end(section)
+
