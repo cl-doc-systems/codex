@@ -1,7 +1,6 @@
 (defpackage #:example-docs/builder
   (:use #:cl)
   (:import-from #:codex)
-  (:import-from #:example)
   (:import-from #:osicat)
   
   (:export #:build))

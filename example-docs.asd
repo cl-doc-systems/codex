@@ -3,4 +3,5 @@
   :author "Alexander Artemenko"
   :license "Unlicense"
   :pathname "docs/scripts"
-  :depends-on ("example-docs/builder"))
+  :depends-on ("example"
+               "example-docs/builder"))
